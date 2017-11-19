@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+	<title>{% block title %}My Blog{% endblock%}</title>
+</head>
+<body style="color:blue;background-color:gray">
+<h1>Hello World</h1>
+<h2>{{hello}}</h2>
+<h3>{{article.title[1]}}</h3>
+<p>{{article.content[1]}}</p>
+</body>
+</html>
