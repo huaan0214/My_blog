@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+	<title>article Page</title>
+</head>
+<body style="color:blue;background-color:gray">
+<h2>{{ article.title }}</h2>	
+<h4>{{ article.content }}</h4>
+<br>
+<a href ="">修改文章</a>
+
+</body>
+</html>

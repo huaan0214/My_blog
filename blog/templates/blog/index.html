@@ -4,9 +4,12 @@
 	<title>{% block title %}My Blog{% endblock%}</title>
 </head>
 <body style="color:blue;background-color:gray">
-<h1>Hello World</h1>
-<h2>{{hello}}</h2>
-<h3>{{article.title}}</h3>
-<p>{{article.content}}</p>
+<h2>
+<a href={% url "blog:edit_page" %}>新文章</a>
+</h2>
+{% for article in articles %}
+<a href= {% url "blog:article_index" article.id %}>{{article.title}}</a>
+<br>
+{% endfor %}
 </body>
 </html>
