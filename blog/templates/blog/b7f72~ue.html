@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<title>edit Page</title>
+</head>
+<body style="color:blue;background-color:gray">
+<form action={% url "blog:edit_action" %} method="post">
+	{% csrf_token %}
+	<input type="hidden" name="article_id" value={{article.id|default:'0'}}>
+	<label>文章标题
+		<input type="text" name="title" placeholder="标题" required value={{article.title}}>
+	</label>
+	<br>
+	<label>文章内容
+		<input type="text" name="content" placeholder="内容" value={{article.content}}>
+	</label>
+	<br>
+	<input type="submit" value="提交">
+	<br>
+	<a href = {% url "blog:home" %}>返回主页</a>
+</form>
+
+</body>
+</html>

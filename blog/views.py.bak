@@ -37,7 +37,6 @@ def edit_action(request):
 			
 def delete_page(request,article_id):
 	models.Article.objects.get(pk=article_id).delete()
-	return HttpResponseRedirect(reverse('blog:home'))
-	#articles=models.Article.objects.all()
-	#return render(request,'blog/index.html',{'articles':articles})
+	articles=models.Article.objects.all()
+	return render(request,'blog/index.html',{'articles':articles})
 	
